@@ -23,7 +23,7 @@ def fibonacci_series(n):
     return [fib(i) for i in range(n)]
 
 
-# print(fibonacci_series(6))
+
 
 # F(n) = F(n - 1) * n
 def factorial(n):
@@ -34,7 +34,7 @@ def factorial(n):
         return n
     return factorial(n - 1) * n
 
-# print(factorial(5))
+
 
 ### Part2 - For the second version, update your program by using built-in packages such as "Math" to enhance or simplify your calculations. Upload this updated version to GitHub as well.
 
@@ -54,8 +54,18 @@ def fibonacci_series_b(n):
     return [fib(i) for i in range(n)]
 
 
-print(fibonacci_series_b(6))
+
 
 import math
 
-print(math.factorial(5))
+factorial_b = math.factorial(5)
+
+
+if __name__ == "__main__":
+    print("Part1:")
+    print(fibonacci_series(6))
+    print(factorial(5))
+
+    print("Part2:")
+    print(fibonacci_series_b(6))
+    print(factorial_b)

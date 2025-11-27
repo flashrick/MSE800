@@ -24,7 +24,9 @@ def getFinalIncome(gross_pay):
         income_start = item[0]
         income_end = item[1]
         tax_rate = item[2]
+        # to get the tax of each area and sum it
         if gross_pay > income_start:
+            # maybe the gross_pay is larger than income_end
             item_end = gross_pay if income_end == None else min(gross_pay, income_end)
             tax += (item_end - income_start) * tax_rate
         else:
@@ -33,16 +35,18 @@ def getFinalIncome(gross_pay):
 
     return gross_pay - tax
 
-# get the input
 
-hours_worked = float(input("Please input your hours worked:"))
-hourly_pay_rate = float(input("Please input your hourly pay rate:"))
-gross_pay = getGrossPay(hours_worked, hourly_pay_rate)
-final_income = getFinalIncome(gross_pay)
-print(
-    f"Your gross pay is {gross_pay:.2f}\n"
-    f"Your final income without tax is {final_income:.2f}"
-)
+if __name__ == "__main__":
+    # get the input
+
+    hours_worked = float(input("Please input your hours worked:"))
+    hourly_pay_rate = float(input("Please input your hourly pay rate:"))
+    gross_pay = getGrossPay(hours_worked, hourly_pay_rate)
+    final_income = getFinalIncome(gross_pay)
+    print(
+        f"Your gross pay is {gross_pay:.2f}\n"
+        f"Your final income without tax is {final_income:.2f}"
+    )
 
 
 
