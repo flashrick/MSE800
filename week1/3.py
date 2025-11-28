@@ -8,18 +8,22 @@ def fibonacci_series(n):
     cache = [None] * (n + 1)
 
     def fib(m):
-        # stopping conditions
+        # stopping conditions.
         if m <= 1:
+            # pop
             return m
 
         # reuse cache
         if cache[m] is not None:
+            # pop
             return cache[m]
 
         # Fibonacci series shows as F(n) = F(n-1) + F(n-2), use recursive function.
+        # push fib(m - 1) and fib(m - 2)
         cache[m] = fib(m - 1) + fib(m - 2)
+        # pop
         return cache[m]
-
+    # push fib(i)
     return [fib(i) for i in range(n)]
 
 
@@ -32,6 +36,7 @@ def factorial(n):
         return "'n' must be larger than 0"
     if n <= 2:
         return n
+    # push factorial(n - 1) and pop factorial(n - 1) * n
     return factorial(n - 1) * n
 
 
@@ -46,11 +51,13 @@ def fibonacci_series_b(n):
     def fib(m):
         # stopping conditions
         if m <= 1:
+            # pop
             return m
 
         # Fibonacci series shows as F(n) = F(n-1) + F(n-2), use recursive function.
+        # push fib(m - 1) and fib(m - 2)
         return fib(m - 1) + fib(m - 2)
-
+    # push fib(i)
     return [fib(i) for i in range(n)]
 
 
@@ -59,6 +66,7 @@ def fibonacci_series_b(n):
 import math
 
 def factorial_b(n):
+    # push and pop
     return math.factorial(n)
 
 
