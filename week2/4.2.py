@@ -57,7 +57,7 @@ class MathClass:
 
             # Fibonacci series shows as F(n) = F(n-1) + F(n-2), use recursive function.
             return fib(m - 1) + fib(m - 2)
-
+        # get the series through for loop
         return [fib(i) for i in range(n)]
 
 
