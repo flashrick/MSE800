@@ -1,3 +1,8 @@
+
+"""
+Author: Wade Wang
+Date: 30/11/2025
+"""
 class MathSeries:
     # No self, no staticmethod
     def __init__(self, n):
