@@ -25,9 +25,11 @@ if __name__ == "__main__":
 
     choice = input("Enter choice (1/2): ")
     # need a parameter
-    n = int(input("Enter a positive integer or 0: "))
-    while n < 0:
-        n = int(input("Invalid. Enter a positive integer: "))
+    text = "Please enter an integer greater than or equal to 0: "
+    n = input(text)
+    text = "Invalid. " + text
+    while type(n) is not int or n < 0:
+        n = input(text)
 
     if choice == "1":
         ans = factorial(n)
