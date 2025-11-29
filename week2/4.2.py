@@ -7,35 +7,6 @@ from functools import lru_cache
 
 # calculate factorial and fibonacci series.
 class MathClass:
-    def __init__(self):
-        # get the calculation type and the number
-        print("Choose an option:")
-        print("1. Factorial")
-        print("2. Fibonacci Serires")
-
-        choice = input("Enter choice (1/2): ")
-        # need a parameter
-        text = "Please enter an integer greater than or equal to 0: "
-        # get the number
-        n = input(text)
-        # set the invalid text
-        text = "Invalid. " + text
-        # verify the invalid number
-        while n.isdigit() is False or int(n) < 0:
-            n = input(text)
-        # convert str to int
-        n = int(n)
-        # users choose the type
-        if choice == "1":
-            ans = self.factorial(n)
-        elif choice == "2":
-            ans = self.fibonacci(n)
-        else:
-            ans = "Invalid choice"
-
-        # print the answer
-        print("\nFinal result:", ans)
-
     # calculate the factorial
     def factorial(self, n):
         # the base case
@@ -60,5 +31,32 @@ class MathClass:
         # get the series through for loop
         return [fib(i) for i in range(n)]
 
+if __name__ == "__main__":
+    # get the calculation type and the number
+    print("Choose an option:")
+    print("1. Factorial")
+    print("2. Fibonacci Serires")
 
-obj = MathClass()
+    choice = input("Enter choice (1/2): ")
+    # need a parameter
+    text = "Please enter an integer greater than or equal to 0: "
+    # get the number
+    n = input(text)
+    # set the invalid text
+    text = "Invalid. " + text
+    # verify the invalid number
+    while n.isdigit() is False or int(n) < 0:
+        n = input(text)
+    # convert str to int
+    n = int(n)
+    # users choose the type
+    obj = MathClass()
+    if choice == "1":
+        ans = obj.factorial(n)
+    elif choice == "2":
+        ans = obj.fibonacci(n)
+    else:
+        ans = "Invalid choice"
+    # print the answer
+    print("\nFinal result:", ans)
+
