@@ -42,26 +42,22 @@ class MathClass:
         if n == 0:
             return 1
         # calculate using recursion
-        return n * self.factorial(n)  
+        return n * self.factorial(n - 1)
 
 
 
     # cache results to avoid repeated calculations
-    def fibonacci_series(self):
-        n = self.n
+    def fibonacci(self, n):
         # cache the function results for identical parameters
         @lru_cache(maxsize=None)
         def fib(m):
             # stopping conditions
             if m <= 1:
-                # pop
                 return m
 
             # Fibonacci series shows as F(n) = F(n-1) + F(n-2), use recursive function.
-            # push fib(m - 1) and fib(m - 2) 
-            # calculate using recursion
             return fib(m - 1) + fib(m - 2)
-        # push fib(i)
+
         return [fib(i) for i in range(n)]
 
 
