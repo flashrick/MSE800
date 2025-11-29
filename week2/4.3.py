@@ -3,16 +3,18 @@ class MathSeries:
     def __init__(self, n):
         self.n = n
 
+    # assign a default value to n
     def factorial_recursive(self, n = None):
-        n = n if n == None else self.n
+        n = n if n is not None else self.n
         if n < 0:
             raise ValueError("Factorial is not defined for negative numbers.")
         if n in (0, 1):
             return 1
-        return n * MathSeries.factorial_recursive(n - 1)
+        return n * self.factorial_recursive(n - 1)
 
+    # assign a default value to n
     def fibonacci_recursive(self, n = None):
-        n = n if n == None else self.n
+        n = n if n is not None else self.n
 
         if n < 0:
             raise ValueError("Fibonacci is not defined for negative numbers.")
@@ -20,16 +22,17 @@ class MathSeries:
             return 0
         if n == 1:
             return 1
-        return (MathSeries.fibonacci_recursive(n - 1) +
-                MathSeries.fibonacci_recursive(n - 2))
+        return (self.fibonacci_recursive(n - 1) +
+                self.fibonacci_recursive(n - 2))
 
     # New method to print all Fibonacci values up to n
-    def fibonacci_series(self, n):
-        n = n if n == None else self.n
+    # assign a default value to n
+    def fibonacci_series(self, n=None):
+        n = n if n is not None else self.n
 
         series = []
         for i in range(n + 1):
-            series.append(MathSeries.fibonacci_recursive(i))
+            series.append(self.fibonacci_recursive(i))
         return series
 
 
