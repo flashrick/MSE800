@@ -28,9 +28,10 @@ if __name__ == "__main__":
     text = "Please enter an integer greater than or equal to 0: "
     n = input(text)
     text = "Invalid. " + text
-    while type(n) is not int or n < 0:
+    while n.isdigit() is False or int(n) < 0:
         n = input(text)
 
+    n = int(n)
     if choice == "1":
         ans = factorial(n)
     elif choice == "2":
