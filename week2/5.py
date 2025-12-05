@@ -38,7 +38,6 @@ class TemperatureConverter:
             f"{converted:.2f} degrees Fahrenheit"
         )
 
-
 def main():
     is_valid = False
     while not is_valid:
@@ -48,7 +47,5 @@ def main():
         print("Invalid input. Please enter the temperature with the correct 'C' or 'F' prefix.")
     print(converter.convert())
         
-
-
 if __name__ == "__main__":
     main()
