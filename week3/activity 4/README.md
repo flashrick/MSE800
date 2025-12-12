@@ -1,0 +1,1 @@
+This is a simple project that uses SQLite3 and Python to manage a school’s programs, courses, lecturers, and students.
