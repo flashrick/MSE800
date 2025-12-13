@@ -2,7 +2,7 @@ from database import Database
 
 
 class Specializations:
-    """Helper that builds the specializations table."""
+    """specializations table."""
 
     def __init__(self, db: Database) -> None:
         # Share the database connection for reuse
