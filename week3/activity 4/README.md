@@ -1,5 +1,8 @@
 Activity 4 contains a small SQLite + Python project that illustrates how to read and write the Course / Student / Lecturer schema from the ER diagram in this folder. The code is kept intentionally compact for classroom use and every table has its own helper class so you can follow the OOP structure easily.
 
+Author: Wade Wang
+Email: flashrick2019@gmail.com
+
 ## Structure
 - `database.py` wraps the SQLite connection so all helpers share the same cursor.
 - `courses.py`, `students.py`, `lecturers.py`, `course_lectures.py` each represent one table with simple create/add/get methods.
