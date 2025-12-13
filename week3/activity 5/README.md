@@ -45,4 +45,4 @@ Email: 270430358@yoobeestudent.ac.nz
 The script lists the senior patients and shows the number of Ophthalmology doctors. Update the table classes and remove `clinic.db` if you change the ER diagram so the schema is recreated on the next run.
 
 ## Video of technical approach
-<video src="./video_1.mp4" controls width="600"></video>
+https://myacg-my.sharepoint.com/:v:/g/personal/270430358_yoobeestudent_ac_nz/IQClnW4dXYh-RryTl8VBLbNYAS8YCriU7KdANfbZgqSM4OI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5bp3M0
