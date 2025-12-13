@@ -6,7 +6,7 @@ class Database:
     """Lightweight wrapper around the sqlite3 connection."""
 
     def __init__(self, db_path: str) -> None:
-        # Store file path so other helpers can reuse it
+        # Store the database path so the other classes reuse one connection
         self.db_path = Path(db_path)
         # Create the connection immediately for shared use
         self.connection = sqlite3.connect(self.db_path)

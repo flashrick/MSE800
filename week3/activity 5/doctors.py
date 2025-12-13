@@ -2,7 +2,7 @@ from database import Database
 
 
 class Doctors:
-    """doctors table."""
+    """Table class for doctors."""
 
     def __init__(self, db: Database) -> None:
         self.db = db

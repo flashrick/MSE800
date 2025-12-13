@@ -4,8 +4,8 @@ Author: Wade Wang
 Email: 270430358@yoobeestudent.ac.nz
 
 ## Structure
-- `database.py` opens the SQLite connection and shares it across helpers.
-- `doctors.py`, `patients.py`, `specializations.py` each implement one table from the ER diagram with create/add helpers plus the custom query helpers needed for this activity.
+- `database.py` opens the SQLite connection so every class shares one handle.
+- `doctors.py`, `patients.py`, `specializations.py` each implement one table from the ER diagram with create/add methods plus the custom query functions needed for this activity.
 - `main.py` builds the schema when `clinic.db` is missing, seeds ten common-name patients (five older than 66) and three Ophthalmology doctors (stored with a direct foreign key), then:
   - Prints every senior patient (>65) with all stored fields.
   - Prints how many doctors have the Ophthalmology specialization.
@@ -42,4 +42,4 @@ Email: 270430358@yoobeestudent.ac.nz
 2. Delete `clinic.db` if you want to rebuild from scratch.
 3. Run `python3 main.py`.
 
-The script lists the senior patients and shows the number of Ophthalmology doctors. Update the table helpers and remove `clinic.db` if you change the ER diagram so the schema is recreated on the next run.
+The script lists the senior patients and shows the number of Ophthalmology doctors. Update the table classes and remove `clinic.db` if you change the ER diagram so the schema is recreated on the next run.
