@@ -6,7 +6,7 @@ class Student(Person):
         super().__init__(name, address, age)
         self.student_id = student_id
 
-    # Override greet method
+    # The output is different from the inherited greet() method because the method has been overridden in the subclass.
     def greet(self):
         print("Hi " + self._name)
 
